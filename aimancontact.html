@@ -1,0 +1,222 @@
+<html>
+<head>
+<title>Aiman Akmal Contact</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body,h1,h2,h3{
+	margin:0;	
+}
+.nav ul{
+	list-style:none;
+	background:#656568;
+	text-align:center;
+	padding:0;
+	margin:0;
+}
+.nav li {
+	display:inline-block;
+}
+.nav a{
+	text-decoration:none;
+	color:#52D1F2 ;
+	width:100px;
+	display:block;
+	padding:17px;
+	font-size:20px;
+	font-family:Helvetica;
+}
+.nav a:hover{
+	transition:0.6s;
+	color:#A8ECFD;
+}
+
+
+h1{
+text-decoration:none;
+}
+p.addline{
+	line-height:4.0;
+}
+.textbox{
+  border-radius:15px;
+  width: 400px;
+  padding: 1px;
+  border: 0px solid gray;
+  margin: 5px;
+  background-color:#84ad9b;
+  border-radius:15px 50px;
+}
+table, td
+{
+	border: 0px solid;
+	border-collapse: collapse;
+	width:50%;
+	background-color:#D9DCD4;
+}
+th{
+	height:70px;
+}
+td{
+	padding: 10px;
+}
+
+.buttonForSubmit{
+	display: inline-block;
+	padding: 10px 50px;
+	border: 2px solid #82A37E;
+	font-size:18px;
+	text-decoration: none;
+	color:#82A37E;
+	margin-top:15px;
+}
+</style>
+
+<!--form validation-->
+<script language="JavaScript">
+function testResults(form) {
+    var TestVar = form.inputbox.value;
+	if(TestVar == ""){
+    alert ("Please fill in your name " + TestVar);
+	}
+}
+</script>
+</head>
+
+<body>
+
+<!--header-->
+<div class='nav'>
+		<ul class="bg">
+			<li><a href ="Home.html">Home</a></li>
+			<li><a href ="workPage1.html">Work</a></li>
+			<li><a href ="aimancontact.html">Contact</a></li>
+		</ul>
+	</div>
+<div style="color:#000;background-color:#82A37E;height:50%;text-align:center">
+		<h3 style="color:#fff;font-family:Verdana;font-size:80px">
+			Contact Me
+		</h3>
+	<p>
+		<h3 style="color:#fff;font-family:Garamond;font-size:50px">
+			Muhammad Aiman Akmal 
+		</h3>
+	<p>
+	<center>
+		<h3 style="color:#fff;font-family:Garamond;font-size:40px">
+		Tel. : +60 18-236-6405
+		</h3>
+		<p>
+		<h3 style="color:#fff;font-family:Garamond;font-size:40px">
+		aimanakmal.9501@gmail.com
+		</h3>	
+	</center>
+</div>
+<center>
+	<table>
+	<div style="color:#000;background-color:#fff;" id="bg">
+	<!--form-->
+	<form name="myform" action="" method="GET">
+	<p style="font-size:30px">
+	Give me some feedback: <br>
+	</p>
+	<!--Name-->	
+	<p>
+		<table>
+			<tr>
+				<td>
+				<p style="font-size:30px">
+				Your Name:
+				</p>
+				</td>
+				<td>
+				<input type="text" name="inputbox" value="" id="nm"><p>
+				</td>
+			</tr>
+	<!--gender-->
+			<tr>
+				<td>
+				<p style="font-size:30px">
+				Gender
+				</p>
+				</td>
+				<td>
+				<h3 style="font-size:20px">
+					<input type="radio" id="gender" name="gender" value="male">Male
+					<input type="radio" id="gender" name="gender" value= "female" >Female
+				</h3>
+				</td>
+			</tr>
+	<!--state-->
+			<tr>
+				<td>
+				<p style="font-size:30px">
+				State
+				</p>
+				</td>
+				<td>
+				
+				<select name="state" id="state">
+					<option value="Not Selected">Select State</option>
+					<option value="Johor">Johor</option>
+					<option value="Kedah">Kedah</option>
+					<option value="Kelantan">Kelantan</option>
+					<option value="melaka">Melaka</option>
+					<option value="Negeri Sembilan">Negeri Sembilan</option>
+					<option value="Pahang">Pahang</option>
+					<option value="Perak">Perak</option>
+					<option value="Perlis">Perlis</option>
+					<option value="Pulau Pinang">Pulau Pinang</option>
+					<option value="Selangor">Selangor</option>
+					<option value="Sabah">Sabah</option>
+					<option value="Sarawak">Sarawak</option>
+					<option value="Terengganu">Terengganu</option>
+				</select>
+				</td>
+			</tr>
+		<!--Feedback-->
+			<tr>
+				<td>
+				<p style="font-size:30px">
+				comment
+				</p>
+				</td>
+				<td>
+				<textarea id="subject" name="subject" style="height:200px; width=400px;">
+				</textarea>
+				</td>
+			</tr>
+		</table>
+		<p>
+		<input class="buttonForSubmit" type="button" name="button" Value="Click" onClick="testResults(this.form);resultForm();">
+	</form>
+	<div>
+		<p id="p1"></p>
+		<p id="p2"></p>
+	</div>
+	<script>
+	function getForm(){
+		var name=document.getElementById("nm").value;
+		var state= document.getElementById("state").value;
+		var full_text = 
+						"<p>Hi " + name + "</p>From " + state + "<p>"+
+						"Thank you for your comment";
+	return full_text;
+	}
+	
+	function resultForm()
+	{  
+		document.getElementById("p1").innerHTML = getForm();   
+	}
+	
+	</script>
+	</div>
+	<div style="color:#000;background-color:#8B947E;height:10%;padding:60px;">
+	<center>
+	<h4 style="font-size:15px">
+	©Copyright 2021 Aiman Akmal.All rights reserved • Privacy Policy
+	<hr width="40%">
+	</center>
+	</div>
+</body>
+	
